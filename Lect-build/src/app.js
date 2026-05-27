@@ -34,6 +34,19 @@ app.post("/api/notes",async (req, res)=> {
         note: newNote,
     })
 })
+// //* @routes GET /api/notes
+//* @description Gets all notes
+//* @access Public
+
+app.get("/api/notes",async (req,res)=>{
+    const notes = await NoteModel.find()
+
+     return res.status(200).json({
+        message: "Notes fechhed successfully",
+        notes,
+    })
+})
+
 
 
 
