@@ -21,7 +21,7 @@ app.post("/api/notes",async (req, res)=> {
         return res.status(400).json({error: "Title must be at least 3 character long"})
     }
 
-     if(title.trim().length < 10) {
+     if(description.trim().length < 10) {
         return res.status(400).json({error: "Description must be at least 10 character long"})
     }
 
